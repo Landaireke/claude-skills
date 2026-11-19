@@ -26,5 +26,6 @@ Invoke a skill with the Skill tool whenever a task matches it, without waiting f
 | A short film or animated video in code | `lemo-opuscar` |
 | Writing a PR body | `pr`, then `humanizer` |
 | Unsure which skill fits | `ask-matt` |
+| Checking a live site or page you built: look, click, fill forms, screenshot | Playwright MCP (`mcp__playwright__*`) |
 
 The rest of the skills in `.claude/skills/` and the plugins load with their own descriptions; trust those descriptions for anything not listed here.
