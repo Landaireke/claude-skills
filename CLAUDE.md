@@ -29,3 +29,27 @@ Invoke a skill with the Skill tool whenever a task matches it, without waiting f
 | Checking a live site or page you built: look, click, fill forms, screenshot | Playwright MCP (`mcp__playwright__*`) |
 
 The rest of the skills in `.claude/skills/` and the plugins load with their own descriptions; trust those descriptions for anything not listed here.
+
+# MCP usage
+
+Use a connected MCP server instead of your own knowledge or a workaround whenever it does the job better: fresher facts, real data, a real browser, or direct access to a service. Don't wait for the user to name it. If a server listed here isn't connected in the session (deferred tools load through ToolSearch first), say so in one line and carry on.
+
+| Need | Use |
+|---|---|
+| Anything that may have changed since training: news, prices, versions, docs, people, companies, stats | Firecrawl `firecrawl_search`, then `firecrawl_scrape` for the page itself |
+| Code questions about libraries, APIs, error messages | Firecrawl `firecrawl_developer_search` |
+| Reading a URL the user gives | Firecrawl `firecrawl_scrape` |
+| Structured company, people, jobs, finance or public-records data | Firecrawl `people_company_search` / `people_company_enrich` / `jobs_search` / Alexandria |
+| US law and regulations; scientific papers | Firecrawl `firecrawl_gov_search`; `firecrawl_research_*` |
+| Seeing, clicking through, or screenshotting a site; testing a page you built | Playwright (`mcp__playwright__*`) |
+| GitHub repos, issues, PRs, CI | GitHub MCP |
+| Database, auth, storage, edge functions | Supabase |
+| Hosting, deploys, logs, cron jobs | Render |
+| A full app built and hosted for the user without local code | Lovable |
+| A rendered video project in HeyGen | HyperFrames |
+| Higgsfield media workspace and generations | Higgsfield |
+| Documents people will keep editing (memo, plan, spec, notes) | Claude Docs |
+
+## Ask first
+
+Reading, searching and listing are always fine. Get the user's OK in the conversation before any call that spends money or credits or changes something live, and say what it will cost or change: Lovable `create_project` / `send_message`, Render creates and deploys, Supabase migrations, SQL writes and new projects, Firecrawl `firecrawl_agent` and paid contact lookups, merging or publishing anything on GitHub.
