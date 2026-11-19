@@ -22,6 +22,7 @@ Invoke a skill with the Skill tool whenever a task matches it, without waiting f
 | Quick throwaway to answer a design question | `prototype` |
 | Turning a discussion into a spec or tickets | `to-spec` / `to-tickets` |
 | Adding or changing animation/motion | `animate` (React Native: `animate-expo`; gestures: `gestures`) |
+| Designing or building a new website, landing page or screen | `hallmark` (existing designs only when the user names Hallmark) |
 | UI polish or stress-testing a component | `emil-design-eng` / `break-ui` |
 | A short film or animated video in code | `lemo-opuscar` |
 | Writing a PR body | `pr`, then `humanizer` |
