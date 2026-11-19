@@ -1,15 +1,8 @@
 {
   "mcpServers": {
     "playwright": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@playwright/mcp@0.0.86",
-        "--headless",
-        "--no-sandbox",
-        "--executable-path",
-        "/opt/pw-browsers/chromium"
-      ]
+      "command": "node",
+      "args": [".claude/playwright-mcp.js"]
     }
   }
 }
